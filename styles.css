@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
 :root {
   --gray: #e2e8f0;
   --blue: #0891b2;
+  --box-shadow-value: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -20,7 +21,6 @@ body {
 body {
   display: grid;
   grid-template: 1fr 4fr / 1fr 5fr;
-  font-size: 1.2rem;
 }
 
 button {
@@ -35,6 +35,8 @@ button {
   grid-template-rows: 1fr 1fr;
   padding: 0.5rem 2rem 1rem;
   font-weight: 500;
+  box-shadow: var(--box-shadow-value);
+  z-index: 1;
 }
 
 .header-top {
@@ -150,6 +152,10 @@ button {
   font-weight: 500;
 }
 
+.sidebar-menu p {
+  font-size: 1.2rem;
+}
+
 .sidebar-menu svg {
   height: 1.5rem;
 }
@@ -163,4 +169,35 @@ button {
 
 .content-wrapper {
   background-color: var(--gray);
+  display: grid;
+  grid-template: 1fr 1fr / 3fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
 }
+
+.content-wrapper h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.projects {
+  grid-row: 1/3;
+  background-color: red;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.announcements {
+  background-color: yellow;
+}
+
+.trending {
+  background-color: blue;
+}
+
+/* .card svg {
+  height: 40px;
+} */
