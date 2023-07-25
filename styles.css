@@ -170,9 +170,15 @@ button {
 .content-wrapper {
   background-color: var(--gray);
   display: grid;
-  grid-template: 1fr 1fr / 3fr 1fr;
+  grid-template-columns: 4fr 1fr;
   gap: 2rem;
   padding: 2rem;
+}
+
+.right-column {
+  display: grid;
+  grid-template-rows: min-content min-content;
+  gap: 1rem;
 }
 
 .content-wrapper h3 {
@@ -184,8 +190,12 @@ button {
 
 .projects {
   grid-row: 1/3;
-  display: grid;
-  gap: 1rem;
+}
+
+.projects h3,
+.announcements h3,
+.trending h3 {
+  margin-bottom: 1rem;
 }
 
 .cards {
@@ -222,10 +232,41 @@ button {
 .card svg {
   height: 1.5rem;
 }
-/* Announcements */
 
+/* Announcements */
 .announcements {
-  background-color: yellow;
+  padding: 1.5rem;
+  border-radius: 0.625rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--box-shadow-value);
+}
+
+.announcements p {
+  font-size: 0.8rem;
+}
+
+.ann-card {
+  display: flex;
+  flex-direction: column;
+  /* padding: 0.8rem 0; */
+}
+
+.ann-card:first-child {
+  padding: 0 0 0.8rem;
+}
+
+.ann-card:last-child {
+  padding: 0.8rem 0 0;
+}
+
+.ann-card:nth-child(2) {
+  padding: 0.8rem 0;
+}
+
+.ann-card:not(:last-child) {
+  border-bottom: 1px solid var(--gray);
 }
 
 /* Trending */
